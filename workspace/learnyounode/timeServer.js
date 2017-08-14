@@ -6,8 +6,8 @@ function zeroFill(i){
 
 var server = net.createServer((socket) => {
     var date = new Date();
-    var result = date.getFullYear().toString() + '-' + zeroFill((date.getMonth() + 1)) + '-' + zeroFill(date.getDate()) + ' ' + (date.getHours()) + 
-     ':' + date.getMinutes().toString() + '\n';
+    var result = date.getFullYear().toString() + '-' + zeroFill((date.getMonth() + 1)) + '-' + zeroFill(date.getDate()) + ' ' + zeroFill(date.getHours()) + 
+     ':' + zeroFill(date.getMinutes().toString()) + '\n';
 
      socket.end(result)
 })
